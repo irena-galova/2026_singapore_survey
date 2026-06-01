@@ -612,7 +612,7 @@ PAGE = """<!DOCTYPE html>
     width: 100%;
     max-width: 640px;
     height: auto;
-    margin: 32px auto 0;
+    margin: 48px auto 0;
     border-radius: 14px;
     box-shadow: 0 4px 16px rgba(12,35,64,0.1);
   }
@@ -777,7 +777,7 @@ PAGE = """<!DOCTYPE html>
   <header class="hero-banner">
     <div class="hero-banner-inner">
       <h1 class="hero-title">Kestria Global Conference in Singapore</h1>
-      <p class="hero-sub">Post-conference feedback (__RESP__ of __TOTAL__ participants shared their feedback)</p>
+      <p class="hero-sub">Post-conference feedback shared by __RESP__ out of __TOTAL__ participants</p>
     </div>
   </header>
 
@@ -788,7 +788,6 @@ PAGE = """<!DOCTYPE html>
     <h2 class="section-heading">In their own words</h2>
     __TEXTS__
 
-    <footer>Kestria &middot; 2026 Global Conference, Singapore</footer>
     <img class="footer-photo" src="conference-photo.png" alt="Kestria Global Conference 2026, Singapore — group photo">
   </div>
 </body>
