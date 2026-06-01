@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 Kestria Global Conference in Singapore - Feedback</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #0057b0;
+    --dark-blue: #0c2340;
+    --gold: #c0865e;
+    --white: #ffffff;
+    --ink: #1a2230;
+    --muted: #5b6675;
+    --line: #e6e9ef;
+    --bg: #f5f6f8;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Noto Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* Header */
+  .topbar {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 28px 0 26px;
+  }
+  .topbar-inner { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+  .brand-logo {
+    height: 68px;
+    width: auto;
+    display: block;
+  }
+  .tagline {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    margin-top: 6px;
+    text-transform: none;
+  }
+  .tagline em { font-style: italic; }
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: clamp(22px, 4vw, 30px);
+    line-height: 1.2;
+    margin: 30px 0 6px;
+    color: var(--dark-blue);
+  }
+  .subtitle { color: var(--muted); margin: 0 0 28px; }
+
+  /* Response-rate banner */
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin: 22px 0 38px;
+    box-shadow: 0 10px 24px rgba(12,35,64,0.14);
+  }
+  .stat-num {
+    font-family: "Oswald", "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1;
+    color: var(--white);
+    white-space: nowrap;
+  }
+  .stat-of { font-size: 0.72em; font-weight: 600; opacity: 0.92; }
+  .stat-label { font-size: 15px; opacity: 0.95; }
+  .stat-label strong { font-weight: 700; }
+
+  .group-label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    color: var(--gold);
+    margin: 40px 0 12px;
+  }
+
+  .section-heading {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: clamp(22px, 3.5vw, 28px);
+    color: var(--dark-blue);
+    margin: 56px 0 24px;
+    padding-top: 36px;
+    border-top: 3px solid var(--line);
+  }
+
+  /* Cards */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px 26px;
+    margin: 0 0 20px;
+    box-shadow: 0 1px 2px rgba(12,35,64,0.04);
+  }
+  .card-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--dark-blue);
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--line);
+  }
+
+  /* AI summary */
+  .ai-summary {
+    background: #faf4ee;
+    border: 1px solid #ecd9c8;
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 14px 18px 16px;
+    margin: 0 0 22px;
+  }
+  .ai-summary-head {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .ai-badge {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    background: var(--gold);
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 5px;
+  }
+  .ai-summary-body {
+    margin: 0;
+    color: #6a4f3a;
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+  .ai-insights {
+    margin: 0;
+    padding-left: 20px;
+    color: #6a4f3a;
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+  .ai-insights li { margin: 5px 0; }
+
+  /* Overall / single score box */
+  .overall-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--dark-blue);
+    color: #fff;
+    border-radius: 12px;
+    padding: 16px 24px;
+    margin: 0 0 20px;
+  }
+  .overall-box--solo { justify-content: center; gap: 0; }
+  .overall-label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+  }
+  .overall-box .score-num { font-size: 42px; line-height: 1; }
+  .overall-box .score-max { color: rgba(255,255,255,0.65); font-size: 17px; }
+
+  .item { margin: 0 0 16px; }
+  .item:last-child { margin-bottom: 0; }
+  .item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .item-name { font-weight: 600; color: var(--ink); }
+  .item-score { white-space: nowrap; }
+  .score-num {
+    font-family: "Oswald", "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--gold);
+  }
+  .score-max { color: var(--muted); font-size: 14px; margin-left: 2px; }
+  .bar {
+    height: 8px;
+    background: #eef1f5;
+    border-radius: 6px;
+    margin-top: 8px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--blue), #2f7fce);
+    border-radius: 6px;
+  }
+
+  .comments { margin-top: 22px; padding-top: 18px; border-top: 1px dashed var(--line); }
+  .comments-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+  .comment-list { list-style: none; margin: 0; padding: 0; }
+  .comment {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .comment:last-child { border-bottom: none; }
+  .comment-name { font-weight: 700; color: var(--blue); }
+  .comment-text { color: var(--ink); }
+  .comment-empty { color: var(--muted); font-style: italic; }
+  .bullets { margin: 6px 0 0; padding-left: 22px; }
+  .bullets li { margin: 3px 0; color: var(--ink); }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 48px;
+  }
+
+  @media (max-width: 560px) {
+    .stat { flex-direction: column; align-items: flex-start; gap: 8px; padding: 20px; }
+    .stat-num { font-size: 52px; }
+    .card { padding: 20px 18px; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    .stat { box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .card { box-shadow: none; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <img class="brand-logo" src="kestria-logo-white.png" alt="Kestria">
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="title">2026 Kestria Global Conference in Singapore</h1>
+    <p class="subtitle">Post-conference feedback summary</p>
+
+    <div class="stat">
+      <div class="stat-num">49<span class="stat-of"> of 54</span></div>
+      <div class="stat-label">
+        <strong>participants</strong> shared their feedback
+      </div>
+    </div>
+
+    <div class="group-label">Ratings</div>
+    
+      <section class="card">
+        <h2 class="card-title">Conference sessions</h2>
+        <div class="ai-summary">
+          <div class="ai-summary-head"><span class="ai-badge">AI</span> Summary</div>
+          <p class="ai-summary-body">Conference sessions were rated strongly overall (8.4). The highest-rated were Dr. Ayesha Khanna&#x27;s AI keynote (9.3) and &#x27;The Authenticity Advantage&#x27; (9.2), with the AI content cited again and again as the most valuable and thought-provoking. The lowest-rated were the sponsor and tool sessions - Ezekia (7.3), Hogan (7.4) and Proactive Agility (7.5) - which some felt were repetitive year over year.</p>
+        </div>
+        <div class="overall-box"><span class="overall-label">Overall conference rating</span>
+          <span class="overall-score"><span class="score-num">8.4</span><span class="score-max">/10</span></span>
+        </div><div class="items">
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Meet Our New Colleagues (new members)</span>
+            <span class="item-score"><span class="score-num">8.9</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:89.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">From Hire to High Performer (Hogan Assessments)</span>
+            <span class="item-score"><span class="score-num">7.4</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:74.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Member Panel: Executive Search in Asia Pacific (APAC members)</span>
+            <span class="item-score"><span class="score-num">8.7</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:87.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Kestria 2030 (Stepan Motejzik)</span>
+            <span class="item-score"><span class="score-num">8.8</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:88.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Enhancing Cross-border Business (BD Task Force)</span>
+            <span class="item-score"><span class="score-num">8.2</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:82.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Practice Group Meetings (PG Leaders)</span>
+            <span class="item-score"><span class="score-num">8.3</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:83.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Tools to Boost our Performance (Ezekia)</span>
+            <span class="item-score"><span class="score-num">7.3</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:73.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Client event keynote: Proactive Agility (Steve McKinney)</span>
+            <span class="item-score"><span class="score-num">7.5</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:75.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Client event keynote: The Authenticity Advantage (Norman Chua)</span>
+            <span class="item-score"><span class="score-num">9.2</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:92.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Client event networking cocktail hour</span>
+            <span class="item-score"><span class="score-num">8.4</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:84.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Beyond Growth: The Moments That Define Us (authentic stories by members)</span>
+            <span class="item-score"><span class="score-num">8.8</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:88.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Positioned to Shine (Global Office)</span>
+            <span class="item-score"><span class="score-num">8.8</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:88.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Keynote: The Augmented Search Firm by Dr. Ayesha Khanna</span>
+            <span class="item-score"><span class="score-num">9.3</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:93.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Kestria Global Insights (Kestria Institute Council)</span>
+            <span class="item-score"><span class="score-num">8.5</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:85.0%"></div></div>
+        </div></div>
+        <div class="comments">
+          <h3 class="comments-title">Comments</h3>
+          <ul class="comment-list"><li class="comment"><span class="comment-name">Thomas Muhmenthaler:</span> <ul class="bullets"><li>Working sessions are most valued.</li><li>Learn from the others.</li></ul></li>
+<li class="comment"><span class="comment-name">Raj Kumar:</span> <span class="comment-text">It is not easy to introduce something new and avoid talking about the same topics about generating XB - members get disillusioned with the same ideas coming about every year. . This conference was really good in terms of choice of speakers.</span></li>
+<li class="comment"><span class="comment-name">Jay Worthy:</span> <span class="comment-text">The client event was great! Just wish we had more time with them.</span></li>
+<li class="comment"><span class="comment-name">Kate Modingoana:</span> <span class="comment-text">I feel more should be done on cross border business.</span></li>
+<li class="comment"><span class="comment-name">Eveline Muhmenthaler:</span> <span class="comment-text">It was really amazing to see how the contribution was high during the event.</span></li>
+<li class="comment"><span class="comment-name">Veron Lee:</span> <span class="comment-text">The lined-up events are meaningful and relevant to our 2026 Global Conference theme.</span></li></ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">Dragon boat teambuilding activity</h2>
+        <div class="ai-summary">
+          <div class="ai-summary-head"><span class="ai-badge">AI</span> Summary</div>
+          <p class="ai-summary-body">The dragon boat teambuilding was one of the most enjoyed parts of the conference (8.8), repeatedly described as great fun and a highlight for team spirit. The main suggestions were practical: warn participants in advance that they will get soaked, and reconsider the timing given the humid weather and an already packed schedule.</p>
+        </div>
+        <div class="overall-box"><span class="overall-label">Team building activity rating</span>
+          <span class="overall-score"><span class="score-num">8.8</span><span class="score-max">/10</span></span>
+        </div>
+        <div class="comments">
+          <h3 class="comments-title">Comments</h3>
+          <ul class="comment-list"><li class="comment"><span class="comment-name">Thomas Muhmenthaler:</span> <span class="comment-text">Going for gold (red team)</span></li>
+<li class="comment"><span class="comment-name">Raj Kumar:</span> <span class="comment-text">By the far the best...maybe because our team won.</span></li>
+<li class="comment"><span class="comment-name">Jay Worthy:</span> <span class="comment-text">Teambuilding is great as usual. Just wish we got an extra warning about getting totally soaked (would have prepared some suitable clothes).</span></li>
+<li class="comment"><span class="comment-name">Dwitiya Sengupta:</span> <span class="comment-text">The activity in itself was amazing, a small suggestion since it was in a humid weather instead of day 1 when the event activities are packed perhaps the last day is a better time to plan anything that would be physically exhausting.</span></li>
+<li class="comment"><span class="comment-name">Anonymous:</span> <span class="comment-text">Not many interaction with the other.</span></li>
+<li class="comment"><span class="comment-name">Kate Modingoana:</span> <span class="comment-text">Great experience of my life, loved it so much.</span></li>
+<li class="comment"><span class="comment-name">Razvan Eliad:</span> <span class="comment-text">I loved the activity, best one so far (for me) showing what team is all about. Probably winning was important too for me :)</span></li>
+<li class="comment"><span class="comment-name">Constanza Ossa:</span> <span class="comment-text">It was fun, though there was little interaction among the partners.</span></li>
+<li class="comment"><span class="comment-name">Eveline Muhmenthaler:</span> <span class="comment-text">Having a drink together after the activity could have been nice to share the experience.</span></li>
+<li class="comment"><span class="comment-name">Katerina:</span> <span class="comment-text">Was ok but not so interactive.</span></li>
+<li class="comment"><span class="comment-name">Travis:</span> <span class="comment-text">It was really fun.</span></li>
+<li class="comment"><span class="comment-name">Veron Lee:</span> <span class="comment-text">Encouraged to see great teamwork across all the teams!</span></li></ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">Conference venue &amp; dinner restaurants</h2>
+        <div class="ai-summary">
+          <div class="ai-summary-head"><span class="ai-badge">AI</span> Summary</div>
+          <p class="ai-summary-body">Andaz scored highly (9.2); dinners lower (6–7). Main feedback: venues too loud for conversation, menus too similar over three nights — quieter settings and more international options requested.</p>
+        </div><div class="items">
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Andaz Singapore (conference: Wed-Fri)</span>
+            <span class="item-score"><span class="score-num">9.2</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:92.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Coca at Suntec (dinner: Wed)</span>
+            <span class="item-score"><span class="score-num">7.0</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:70.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Long Beach Seafood (dinner: Thu)</span>
+            <span class="item-score"><span class="score-num">6.2</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:62.0%"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-name">Fu Yuan Teochew Dining (dinner: Fri)</span>
+            <span class="item-score"><span class="score-num">6.2</span><span class="score-max">/10</span></span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:62.0%"></div></div>
+        </div></div>
+        <div class="comments">
+          <h3 class="comments-title">Comments</h3>
+          <ul class="comment-list"><li class="comment"><span class="comment-name">Thomas Muhmenthaler:</span> <span class="comment-text">Restaurant locations were too loud - no chance for communication.</span></li>
+<li class="comment"><span class="comment-name">Raj Kumar:</span> <span class="comment-text">I value the conference more than the food. However, having oriental cuisines 3 days in row was boring. I appreciate the length Irena and the respective restaurants went, to look after patron who don&#x27;t consume beef and those who are vegetarian.</span></li>
+<li class="comment"><span class="comment-name">Dwitiya Sengupta:</span> <span class="comment-text">All three dinners had broadly similar food, which in itself was perfectly fine. The challenge, however, was that there was no menu card or display indicating what was being served at each table. As someone who does not consume beef for religious reasons, I repeatedly had to check with the waitstaff before eating. A simple listing of the food items being served, even in sequence, would have made the dining experience significantly smoother and more comfortable for guests.</span></li>
+<li class="comment"><span class="comment-name">Anonymous:</span> <span class="comment-text">The venue could have been better.</span></li>
+<li class="comment"><span class="comment-name">Kate Modingoana:</span> <span class="comment-text">The hotel was great and the restaurant were just fine.</span></li>
+<li class="comment"><span class="comment-name">Constanza Ossa:</span> <span class="comment-text">I think they should take us only one day to eat local dishes, the rest of the days should be international food.</span></li>
+<li class="comment"><span class="comment-name">Katerina:</span> <span class="comment-text">Excellent hotel, the asian food is very different from european.. for the future more international options could be considered.</span></li>
+<li class="comment"><span class="comment-name">Travis:</span> <span class="comment-text">I&#x27;m sorry to give such low ratings on the dining venues. I did not hear many people enjoy them. I think we went too authentic and had no safe bets either night to serve such an international group. All tables I sat at each night were finishing quite hungry as not many people were eating the food. The ambiances were also too bright, no sort of entertainment etc. I think we should try to avoid the mall style environments for a beautiful dinner with colleagues that we get to see once a year.</span></li>
+<li class="comment"><span class="comment-name">Veron Lee:</span> <span class="comment-text">Food arrangements were nicely planned.</span></li></ul>
+        </div>
+      </section>
+
+    <h2 class="section-heading">In their own words</h2>
+    
+      <section class="card">
+        <h2 class="card-title">What are the main takeaways from the Kestria Global Conference in Singapore that you plan to implement in your practice?</h2>
+        <div class="ai-summary">
+          <div class="ai-summary-head"><span class="ai-badge">AI</span> Top insights</div>
+          <ul class="ai-insights"><li>Integrate AI tools into the search process and day-to-day workflows.</li><li>Shift the value proposition from &#x27;finding&#x27; talent to leadership advisory.</li><li>Strengthen cross-border collaboration with Kestria partners.</li><li>Use the Kestria brand and global network more actively with clients.</li><li>Deepen authentic, trust-based relationships with clients and candidates.</li></ul>
+        </div>
+        <ul class="comment-list"><li class="comment"><span class="comment-name">Intan Jalaludin:</span> <span class="comment-text">Persistent and continuously building relationship with target clients, explore ways how AI can enrich the experience or journey.</span></li>
+<li class="comment"><span class="comment-name">Thomas Suter:</span> <span class="comment-text">We have to keep our transformation level high and understand future customer needs.</span></li>
+<li class="comment"><span class="comment-name">Ron Magen:</span> <span class="comment-text">Implement AI systems.</span></li>
+<li class="comment"><span class="comment-name">Ryan Berrecloth:</span> <span class="comment-text">How to better utilize AI in BD efforts.</span></li>
+<li class="comment"><span class="comment-name">Cees:</span> <span class="comment-text">More activity and forcing Xborders by the members.</span></li>
+<li class="comment"><span class="comment-name">Thomas Muhmenthaler:</span> <span class="comment-text">Our job will change from “finding” to “Leadership Advisory”. In the future, we will no longer be able to charge the same fees as we do today—clients will no longer be willing to pay for the process and for finding talent.</span></li>
+<li class="comment"><span class="comment-name">Raj Kumar:</span> <span class="comment-text">Definitely relooking at our approach, given the learning from Dr. Ayesha.</span></li>
+<li class="comment"><span class="comment-name">Shalini:</span> <ul class="bullets"><li>Insights on BD.</li><li>How well to position our global brand to clients.</li><li>How to use AI more effectively.</li></ul></li>
+<li class="comment"><span class="comment-name">Daniela Mercandino:</span> <span class="comment-text">Overall, I found everything very interesting. I believe this year the conference brought key topics down to a very practical level, and as Krebs, these are areas we will need to continue implementing and developing. For example, the use of AI in our processes was something we had already started working on, but after the conference it became even more relevant and gained much more momentum for us.</span></li>
+<li class="comment"><span class="comment-name">Celine Chabée:</span> <span class="comment-text">Great conference — the very best part remains the in-person connections, which create a completely different level of engagement within PG. Even if some of the ideas were not necessarily revolutionary, I truly felt a much stronger level of connection with the people who were present, along with the opportunity to build new relationships beyond the LSHC PG network. I especially enjoyed the conference on AI and the forward-looking perspective around Future Leadership Evaluation and its impact on our business models. It is incredibly important that we continue looking ahead together. In parallel, the 2030 vision and the idea of a client-focused event make a lot of sense both now and for the future. The AI-Powered Vertical Farm concept was also an excellent idea — definitely something worth keeping in mind for other destinations in the future.</span></li>
+<li class="comment"><span class="comment-name">Jay Worthy:</span> <span class="comment-text">Learn how to integrate AI better as well as sell our value as AI is taking over the process side of things.</span></li>
+<li class="comment"><span class="comment-name">Guy Brew:</span> <span class="comment-text">Greater clarity on potential AI efficiencies without losing &#x27;high touch&#x27; value proposition. Useful content on Kestria&#x27;s upgrade to its digital platform, which we will likely adopt - thank you Opportunity to network with colleagues, broaden your perspective and appreciate similar (and different) issues, trends etc across markets and geographies.</span></li>
+<li class="comment"><span class="comment-name">Anuradha Patil:</span> <span class="comment-text">Meeting the global partners and the some of the connections made were invaluable. The AI intervention and thought provoking discussion on reinventing our each process to compliment AI tools was an eye opener. Personal hobbies/ sneak peek into the personality and hobbies of members was very interesting.</span></li>
+<li class="comment"><span class="comment-name">Tomasz:</span> <span class="comment-text">Return on AI Investment Stronger involvent in practice groups Further development of executive assessment.</span></li>
+<li class="comment"><span class="comment-name">Dwitiya Sengupta:</span> <span class="comment-text">I picked up on some contract clauses other kestria members are using that have potential upside for our market to experiment with, and loved the AI session too, as it got me thinking about how I can improve my team&#x27;s workflows. Lastly, I also feel more clear-headed around the approach/positioning of Kestria USPs for Indian Origin businesses. We have not been using the Kestria newsletter, and I need to create a process internally to drive the circulation of the same locally.</span></li>
+<li class="comment"><span class="comment-name">Edel:</span> <span class="comment-text">The main takeaways from the Kestria Global Conference in Singapore that I plan to implement in my practice are strengthening cross-border collaboration and further developing a true partnership culture with clients by fostering clear and transparent communication.</span></li>
+<li class="comment"><span class="comment-name">Janice:</span> <span class="comment-text">Getting more involved in cross border and my groups.</span></li>
+<li class="comment"><span class="comment-name">Steve McKinney:</span> <span class="comment-text">We all need to develop a Proactively Agile business to stay ahead of the curve and stay on top of the charts. Or, we risk becoming irrelevant. One place to start is to take one of my &quot;Pillars of Proactive Agility&quot; and implement it. Another idea is to take the ideas curated during the Kestria Institute Council session on redefining our values as trusted advisors and incorporate them into all of our communications and process systems. And finally, we need to use more AI tools to handle routine tasks.</span></li>
+<li class="comment"><span class="comment-name">Bryan McKinney:</span> <span class="comment-text">The points Dr. Ayesha Khanna shared on positioning ourselves and selling our services in this era AI disruption. The points made in her keynote aligned perfectly with the Kestria Global Insights (Kestria Institute Council) session afterward, where we could apply these ideas to the questions as we brainstormed.</span></li>
+<li class="comment"><span class="comment-name">Kate Modingoana:</span> <span class="comment-text">Doing better in my practice group by doing more research, try new tools for searching.</span></li>
+<li class="comment"><span class="comment-name">Alexander:</span> <span class="comment-text">Ai doesn&#x27;t replace but shifts the value chain.</span></li>
+<li class="comment"><span class="comment-name">Emily Witts:</span> <span class="comment-text">Focusing on the impact and use of AI to assist with the search process.</span></li>
+<li class="comment"><span class="comment-name">Michael Kantel:</span> <span class="comment-text">AI and XBorder.</span></li>
+<li class="comment"><span class="comment-name">Malcolm Duncan:</span> <span class="comment-text">The AI presentation was the best. I have seen on both the subject and its direct relevance and focus on the Executive search industry. I intend toand it’s direct relevance and focus on the Executive search industry. I intend to implement many of its ideas.</span></li>
+<li class="comment"><span class="comment-name">Razvan Eliad:</span> <span class="comment-text">Focusing on understanding how to best implement AI tools; being even more flexible in XB discussions so to increase the number of deals.</span></li>
+<li class="comment"><span class="comment-name">Wu Nine Jee:</span> <span class="comment-text">To explore methods to use AI to automate our search processes.</span></li>
+<li class="comment"><span class="comment-name">Constanza Ossa:</span> <span class="comment-text">New Strategies for cross border Selling.</span></li>
+<li class="comment"><span class="comment-name">Anders Jørgensen:</span> <span class="comment-text">Some tools regarding AI but also value proposition that have changed from finding leaders to leadership advisory and reducing risks as a key leverage for executive searches.</span></li>
+<li class="comment"><span class="comment-name">João Miguel Antunes:</span> <span class="comment-text">Three key takeaways stand out:</span><ul class="bullets"><li>Strengthening our role as a strategic advisor in moments that truly matter.</li><li>Leveraging Kestria’s global platform to bring broader perspectives and access to talent.</li><li>Continuing to build meaningful, trust-based relationships with both clients and candidates Rather than introducing entirely new approaches, our focus will be on further reinforcing these priorities within our practice.</li></ul></li>
+<li class="comment"><span class="comment-name">Eveline Muhmenthaler:</span> <ul class="bullets"><li>More personal meetings.</li><li>Visiting other countries.</li><li>Sharing events and takeouts in the Practice or the whole group.</li></ul></li>
+<li class="comment"><span class="comment-name">Pedro Antão:</span> <span class="comment-text">The network, the shared knowledge, the relationship.</span></li>
+<li class="comment"><span class="comment-name">Niklas Claesson:</span> <span class="comment-text">I will continue strengthening Life Science in Sweden while also trying to broaden Bondi’s industry experience. My vision is for us to reflect Kestria by having partners who represent the industries that Kestria represents. This is something I keep in mind constantly. I also take with me where in the process we deliver value to the client; we need to become better at implementing new technology in our day-to-day work. Working more as advisors is something we already do, but it is easier with Swedish companies compared to subsidiaries of big pharma companies, which are generally more structured from the outset and tend to handle the strategic aspects themselves.</span></li>
+<li class="comment"><span class="comment-name">Piotr Mazurkiewicz:</span> <span class="comment-text">New leadership of Hogan.</span></li>
+<li class="comment"><span class="comment-name">Kari Hausen:</span> <span class="comment-text">Goals in XB.</span></li>
+<li class="comment"><span class="comment-name">Monicca Yan:</span> <span class="comment-text">Adoption of AI into our workflow and how we do pitches going forward.</span></li>
+<li class="comment"><span class="comment-name">Katerina:</span> <span class="comment-text">Trust and authenticity are the key values going forward.</span></li>
+<li class="comment"><span class="comment-name">Travis:</span> <span class="comment-text">I think it actually came from my last beer with Team Switzerland on Saturday...... we are exploring sharing some marketing costs and sharing the load of the same marketing manager &amp; coordinator to really ramp up our growth efforts. I also had a few great takeaways from our guest speakers.</span></li>
+<li class="comment"><span class="comment-name">Hong Nguyen:</span> <span class="comment-text">XB, BD actions: find the potential clients, assignments that we could not approach. Get help from Partners that clients HQ based on those countries.</span></li>
+<li class="comment"><span class="comment-name">Veron Lee:</span> <span class="comment-text">Group discussions within own practice group which could in turn set possible timelines and delivery of our follow up actions from the discussion outcome.</span></li>
+<li class="comment"><span class="comment-name">Jesper Dambo:</span> <span class="comment-text">The power in different cultures. Strong similarities.</span></li>
+<li class="comment"><span class="comment-name">Giorgio Veronelli:</span> <span class="comment-text">Authenticity, need for ai, need to be more consultative.</span></li></ul>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">What is one cross-border business development initiative that you can implement in your local firm within the next 30 days?</h2>
+        <div class="ai-summary">
+          <div class="ai-summary-head"><span class="ai-badge">AI</span> Top insights</div>
+          <ul class="ai-insights"><li>Map local clients with global headquarters or international operations.</li><li>Identify portfolio clients also served by global partners and initiate joint outreach.</li><li>Build a target list and schedule intro calls with relevant Kestria colleagues.</li><li>Explore specific regional or sector opportunities with partners abroad.</li><li>Restart a newsletter or direct outreach to stay top of mind with key contacts.</li></ul>
+        </div>
+        <ul class="comment-list"><li class="comment"><span class="comment-name">Intan Jalaludin:</span> <span class="comment-text">Target for niche/high level role(s) with global companies in local/regional setting, escalate to Managing Partner.</span></li>
+<li class="comment"><span class="comment-name">Ron Magen:</span> <span class="comment-text">Reach out to local companies with global HQ.</span></li>
+<li class="comment"><span class="comment-name">Ryan Berrecloth:</span> <span class="comment-text">Collaboration with APAC.</span></li>
+<li class="comment"><span class="comment-name">Cees:</span> <span class="comment-text">On going business as usual.</span></li>
+<li class="comment"><span class="comment-name">Thomas Muhmenthaler:</span> <span class="comment-text">First, we’ve connected with Travis, a Swiss CEO who has taken over the helm of a Canadian department store, and second, we’re in talks with Matthias from Silberstein Partners to secure cross-border opportunities in South Korea and Japan.</span></li>
+<li class="comment"><span class="comment-name">Raj Kumar:</span> <span class="comment-text">Motivated by the XB we generated for Australia and Hungary, I want to position Eastern Europe as a hub for back-end processing. I have discussed with Veronika to write a paper on that. Will explore that idea with our clients in Europe.</span></li>
+<li class="comment"><span class="comment-name">Shalini:</span> <span class="comment-text">Identify 5–10 clients in our portfolio also served by our global partners and understand the mandates they handle.</span></li>
+<li class="comment"><span class="comment-name">Daniela Mercandino:</span> <span class="comment-text">One of the areas I am strongly focusing on is finding partners in Peru and Colombia. I believe we can reach those markets in a closer and more effective way, and then connect those opportunities with you. I have already mapped several boutique firms where I believe we could have good success potential.</span></li>
+<li class="comment"><span class="comment-name">Celine Chabée:</span> <span class="comment-text">Create stronger synergies across the events we organize and maximize cross-border visibility. Continue developing accounts that are already active within the sector, even when there is no active representative currently involved within the group.</span></li>
+<li class="comment"><span class="comment-name">Jay Worthy:</span> <span class="comment-text">We will work on speaking about Kestria more frequently.</span></li>
+<li class="comment"><span class="comment-name">Anuradha Patil:</span> <span class="comment-text">More focus on BD with Global clients /clients with regional presence.</span></li>
+<li class="comment"><span class="comment-name">Tomasz:</span> <span class="comment-text">Direct contact with other Kestria memebers.</span></li>
+<li class="comment"><span class="comment-name">Dwitiya Sengupta:</span> <span class="comment-text">I plan to list and initiate contact with 15 Indian Origin Global MNCs and schedule some introductory connects with Kestria Global Office or the Practice group leader, perhaps a joint call with both parties and potential clients.</span></li>
+<li class="comment"><span class="comment-name">Janice:</span> <span class="comment-text">Using the white papers etc from the agri group to try meet CEO&#x27;s in Agri.</span></li>
+<li class="comment"><span class="comment-name">Steve McKinney:</span> <span class="comment-text">I need to develop more in Life Sciences and Health Care sector and the Semiconductor industry, which are the two largest industries currently in Korea. So, we are identifying specific Kestria Partners to set up brief meetings to discuss our opportunities and ways to collaborate.</span></li>
+<li class="comment"><span class="comment-name">Bryan McKinney:</span> <span class="comment-text">Restart a company newsletter. We used to send a newsletter to past candidates, past clients, and those who signed up. This gives us an opportunity to stay in people&#x27;s minds, to remember our services, and gives us an excuse, since we are still &quot;connected&quot; to reach out for anything. People I meet at events, although they may remember my dad or me, they sometimes forget what services we provide, sometimes ask what we&#x27;re doing these days, and if we are still doing the same business. When we had the newsletter, this was not asked. From here, it would be easier to implement multiple initiatives, from promoting Kestria and our global capabilities to directly contacting key stakeholders for a conversation.</span></li>
+<li class="comment"><span class="comment-name">Kate Modingoana:</span> <span class="comment-text">Building more relationships by networking with fellow members.</span></li>
+<li class="comment"><span class="comment-name">Alexander:</span> <span class="comment-text">Make it part of our frequent meeting.</span></li>
+<li class="comment"><span class="comment-name">Emily Witts:</span> <span class="comment-text">This is tricky as our practice of Education is a bit of a standalone practice. I did meet many great colleagues from around the world but they primarily work in the corporate sector.</span></li>
+<li class="comment"><span class="comment-name">Michael Kantel:</span> <span class="comment-text">Concentrate on one! client and develop from top down and bottom up.</span></li>
+<li class="comment"><span class="comment-name">Malcolm Duncan:</span> <span class="comment-text">Identify the appropriate trusts and foundations the NGO group can target.</span></li>
+<li class="comment"><span class="comment-name">Razvan Eliad:</span> <span class="comment-text">I already do, but I will emphasize even more our global capacities, when discussing with a multinational client.</span></li>
+<li class="comment"><span class="comment-name">Constanza Ossa:</span> <span class="comment-text">Be Proactive in generating meetings between Kestria Partners and potential clients.</span></li>
+<li class="comment"><span class="comment-name">Anders Jørgensen:</span> <span class="comment-text">Mapping and contacting customers from our market with Kestria value prop.</span></li>
+<li class="comment"><span class="comment-name">João Miguel Antunes:</span> <span class="comment-text">Within the next 30 days, we will identify 3–5 clients of Kestria partners with operations in Portugal and proactively engage with the respective partners to support these clients locally.</span></li>
+<li class="comment"><span class="comment-name">Eveline Muhmenthaler:</span> <span class="comment-text">Using pitchbook to identify what companies/people are located in Switzerland and other member countries to make a short connection and a longer introduction.</span></li>
+<li class="comment"><span class="comment-name">Piotr Mazurkiewicz:</span> <span class="comment-text">More activity in Technology Practice Group.</span></li>
+<li class="comment"><span class="comment-name">Kari Hausen:</span> <span class="comment-text">Call back to some of my earlier potential XB clients.</span></li>
+<li class="comment"><span class="comment-name">Monicca Yan:</span> <span class="comment-text">Follow up on the invited guests who were invited by Kestria colleagues.</span></li>
+<li class="comment"><span class="comment-name">Katerina:</span> <span class="comment-text">To introduce more international clients to members worldwide.</span></li>
+<li class="comment"><span class="comment-name">Travis:</span> <span class="comment-text">Start including colleagues on local pitches who may be able to help me win the business.</span></li>
+<li class="comment"><span class="comment-name">Hong Nguyen:</span> <span class="comment-text">XB, BD actions: find the potential clients, assignments that we could not approach. Get help from Partners that clients HQ based on those countries.</span></li>
+<li class="comment"><span class="comment-name">Veron Lee:</span> <span class="comment-text">To review and follow up with existing clients on possible talent acquisition potentials for 2H of year 2026.</span></li>
+<li class="comment"><span class="comment-name">Jesper Dambo:</span> <span class="comment-text">To create more joint meetings even without a specific assignment but just to introduce and be top of mind.</span></li>
+<li class="comment"><span class="comment-name">Giorgio Veronelli:</span> <span class="comment-text">Create a list of italian company with hq here to do xb.</span></li></ul>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">What is one cross-border business development initiative that you think your Practice Group can implement in your local firm within the next 30-60 days?</h2>
+        <div class="ai-summary">
+          <div class="ai-summary-head"><span class="ai-badge">AI</span> Top insights</div>
+          <ul class="ai-insights"><li>Dedicate regular PG meeting time to cross-border opportunities and market intelligence.</li><li>Share case studies, best practices and insights across the global network.</li><li>Map clients in the PG with cross-border hiring or expansion needs.</li><li>Coordinate joint business development on shared or multinational accounts.</li><li>Review cross-border pipeline progress on a quarterly basis.</li></ul>
+        </div>
+        <ul class="comment-list"><li class="comment"><span class="comment-name">Intan Jalaludin:</span> <span class="comment-text">Potential XB discussion in every monthly meeting.</span></li>
+<li class="comment"><span class="comment-name">Ryan Berrecloth:</span> <span class="comment-text">Deeper global consumer trends.</span></li>
+<li class="comment"><span class="comment-name">Cees:</span> <span class="comment-text">Working on closer Xborder development with India especially.Sell more.</span></li>
+<li class="comment"><span class="comment-name">Thomas Muhmenthaler:</span> <span class="comment-text">I’ve already launched this initiative in Singapore for PG Consumer. It’s based on market insights we’ve gathered in Switzerland, and now we’re working with Steve and Ryan to expand on them so that Vero can turn them into a global story.</span></li>
+<li class="comment"><span class="comment-name">Shalini:</span> <span class="comment-text">To identify clients with cross border hiring needs and leverage on Kestria&#x27;s global network and how we can help them by identifying talents as we focus on quality placements.</span></li>
+<li class="comment"><span class="comment-name">Jay Worthy:</span> <span class="comment-text">Better communication and lead sharing.</span></li>
+<li class="comment"><span class="comment-name">Guy Brew:</span> <span class="comment-text">More interaction, communication. Ichor will continue to support Rohan to gain business in our universities. No new realistic ideas to generate cross-border business. Some mild dissatisfaction on the level of focus on cross border business voices by several members.</span></li>
+<li class="comment"><span class="comment-name">Anuradha Patil:</span> <span class="comment-text">Joint BD calls with members to validate our global knowledge /presence.</span></li>
+<li class="comment"><span class="comment-name">Janice:</span> <span class="comment-text">The above and get a CEO to be interviewed.</span></li>
+<li class="comment"><span class="comment-name">Steve McKinney:</span> <span class="comment-text">We already have targets in each of my PG&#x27;s.</span></li>
+<li class="comment"><span class="comment-name">Bryan McKinney:</span> <span class="comment-text">One person we could contact whom we had on NGO project with to see if they are expanding to any other countries or not.</span></li>
+<li class="comment"><span class="comment-name">Michael Kantel:</span> <span class="comment-text">Currently we are already working on several Xborder opportunities, which are promising.</span></li>
+<li class="comment"><span class="comment-name">Malcolm Duncan:</span> <span class="comment-text">See above; I will then provide the right targets to the right jurisdictions to follow up.</span></li>
+<li class="comment"><span class="comment-name">Razvan Eliad:</span> <span class="comment-text">As said I&#x27;m very flexible, when it comes to working with Kestria colleagues, so what the PG can expect from me is that I will do my best to find a way to make a XB work.</span></li>
+<li class="comment"><span class="comment-name">João Miguel Antunes:</span> <span class="comment-text">Similarly, by leveraging the expertise within the Agribusiness and Technology Practice Groups, we plan to identify a small number of Kestria clients with operations or growth ambitions in Portugal. In close coordination with the respective partners, we aim to translate this into tangible cross-border opportunities — bringing local insight while reinforcing a consistent global approach.</span></li>
+<li class="comment"><span class="comment-name">Niklas Claesson:</span> <span class="comment-text">Today, I contacted a friend who is General Manager of a pharmaceutical company in Germany to explore future needs with the aim of creating cross-border business together with Michael and Mathias. I am continuously communicating with my other partners at Bondi about this opportunity.</span></li>
+<li class="comment"><span class="comment-name">Piotr Mazurkiewicz:</span> <span class="comment-text">Check which our technology client develop internationally.</span></li>
+<li class="comment"><span class="comment-name">Kari Hausen:</span> <span class="comment-text">Most likely: target defence sector companies in Finland.</span></li>
+<li class="comment"><span class="comment-name">Monicca Yan:</span> <span class="comment-text">Change our engagement document - put greater emphasis on leadership assessment rather than on process and coverage.</span></li>
+<li class="comment"><span class="comment-name">Katerina:</span> <span class="comment-text">To think actively on opening doors for new clients.</span></li>
+<li class="comment"><span class="comment-name">Hong Nguyen:</span> <span class="comment-text">XB, BD actions: find the potential clients, assignments that we could not approach. Get help from Partners that clients HQ based on those countries.</span></li>
+<li class="comment"><span class="comment-name">Veron Lee:</span> <span class="comment-text">List potential x-border opportunities and consolidate within Practice Group to review and make applicable connections within Kestria Group. Consider reviewing on a quarterly basis as part of Practice group meeting agenda.</span></li>
+<li class="comment"><span class="comment-name">Giorgio Veronelli:</span> <span class="comment-text">Newsletter to clients and newsletter of candidates.</span></li></ul>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">What is your one takeaway to boost your local and global = GloCal marketing and positioning?</h2>
+        <div class="ai-summary">
+          <div class="ai-summary-head"><span class="ai-badge">AI</span> Top insights</div>
+          <ul class="ai-insights"><li>Position the firm as a local advisor with global reach through the Kestria brand.</li><li>Increase use of Kestria content — newsletters, blogs, white papers and social media.</li><li>Improve website SEO and reshare Kestria posts more consistently.</li><li>Promote Kestria global capabilities in every client and prospect conversation.</li><li>Use Kestria templates and market insights to strengthen local positioning.</li></ul>
+        </div>
+        <ul class="comment-list"><li class="comment"><span class="comment-name">Intan Jalaludin:</span> <span class="comment-text">It is proven that excellence delivery, continuously building relationship and trust with decision-makers within local/regional context - they help promote us/strong company&#x27;s branding for creation of repeat business on a wider scale e.g. within the client&#x27;s group.</span></li>
+<li class="comment"><span class="comment-name">Thomas Suter:</span> <span class="comment-text">We should more talk about our international partners in our local communication.</span></li>
+<li class="comment"><span class="comment-name">Ron Magen:</span> <span class="comment-text">Content or any other material that can serve both brands. Promoting 2 brands in parallel is challenging.</span></li>
+<li class="comment"><span class="comment-name">Cees:</span> <span class="comment-text">Sell more regional knowledge with market.</span></li>
+<li class="comment"><span class="comment-name">Thomas Muhmenthaler:</span> <span class="comment-text">We need to adapt our consulting services accordingly. This will also have an impact on the experience a managing partner at Viavanta needs to bring to the table.</span></li>
+<li class="comment"><span class="comment-name">Raj Kumar:</span> <span class="comment-text">Constantly use Kestria brand. We have already started doing that since Jan,with new report format etc.</span></li>
+<li class="comment"><span class="comment-name">Shalini:</span> <span class="comment-text">Understand the local market deeply, but stay align globally with international trends through our Practice Groups.</span></li>
+<li class="comment"><span class="comment-name">Celine Chabée:</span> <span class="comment-text">Create proprietary methodologies and content around: Future Leadership Evaluation, AI Leadership Readiness,.</span></li>
+<li class="comment"><span class="comment-name">Jay Worthy:</span> <span class="comment-text">Building up our AEO.</span></li>
+<li class="comment"><span class="comment-name">Guy Brew:</span> <span class="comment-text">Confirmed our intent to utilise the Kestria web platform, which should enrich the capture of global perspectives etc.</span></li>
+<li class="comment"><span class="comment-name">Dwitiya Sengupta:</span> <span class="comment-text">Newsletter circulation, interviews with local c suite leaders using the kestria format and content plan.</span></li>
+<li class="comment"><span class="comment-name">Edel:</span> <span class="comment-text">A local + international mindset with a multicultural approach.</span></li>
+<li class="comment"><span class="comment-name">Janice:</span> <span class="comment-text">I have set up time every 2nd day for my team to engage with Kestria posts.</span></li>
+<li class="comment"><span class="comment-name">Steve McKinney:</span> <span class="comment-text">Continue to position ourselves in every conversation that we can, that we are local and global, as well as tie this in with our Bestseller book of Global Mindset, to further strengthen our position. Hot flash, Forbes Magazine has called requesting an interview with us about the book.</span></li>
+<li class="comment"><span class="comment-name">Bryan McKinney:</span> <span class="comment-text">Post more blogs and more frequently on our website. We neglected it in 2025, focusing on LinkedIn and other channels, so I think we killed our SEO and did not rank high on search results for executive search in Korea as much as we would in previous years. We used always be number 1 for this search. Based on our test, the website and SEO optimization with partners&#x27; websites is more important for new business inquiries than LinkedIn.</span></li>
+<li class="comment"><span class="comment-name">Kate Modingoana:</span> <span class="comment-text">Making use of Kestria templates.</span></li>
+<li class="comment"><span class="comment-name">Alexander:</span> <span class="comment-text">Talk and inform our customers about Kestria (and the potential of Kestria) even more than we did so far.</span></li>
+<li class="comment"><span class="comment-name">Emily Witts:</span> <span class="comment-text">The use of Kestria resources such as articles, surveys etc. as a marketing tool for our office. Another way to connect with current and future clients.</span></li>
+<li class="comment"><span class="comment-name">Michael Kantel:</span> <span class="comment-text">Use the current economic situation to present to present KESTRIA GloCal without expecting an immediate assignment. Clients will listen and keep in mind until business will recover. Then KESTRIA will be first in the row.</span></li>
+<li class="comment"><span class="comment-name">Malcolm Duncan:</span> <span class="comment-text">The collegiality, trust and common purpose of our organization created through global meetings and mutual understanding of practice.</span></li>
+<li class="comment"><span class="comment-name">Razvan Eliad:</span> <span class="comment-text">I have to improve my SEO, as many of my competitors are on the market for many years, so this is a task that has to work better for me, for visibility towards new potential clients.</span></li>
+<li class="comment"><span class="comment-name">João Miguel Antunes:</span> <span class="comment-text">Our key takeaway is the importance of consistently positioning ourselves as a local advisor with global reach, leveraging the Kestria brand as a platform to translate global insight into impactful local execution.</span></li>
+<li class="comment"><span class="comment-name">Eveline Muhmenthaler:</span> <span class="comment-text">Inviting my colleagues to our upcoming events in June and writing a story about that.</span></li>
+<li class="comment"><span class="comment-name">Niklas Claesson:</span> <span class="comment-text">Continue the way we are doing.</span></li>
+<li class="comment"><span class="comment-name">Piotr Mazurkiewicz:</span> <span class="comment-text">New website of executive search service.</span></li>
+<li class="comment"><span class="comment-name">Monicca Yan:</span> <span class="comment-text">Launch of Kestria webtemplate and engaging clients about our global conference.</span></li>
+<li class="comment"><span class="comment-name">Katerina:</span> <span class="comment-text">To invest heavily communication on the global brand : Kestria.</span></li>
+<li class="comment"><span class="comment-name">Travis:</span> <span class="comment-text">Continue leveraging resharing on social media.</span></li>
+<li class="comment"><span class="comment-name">Hong Nguyen:</span> <span class="comment-text">Increasing blogs with local contents connected to global Kestria brand name.</span></li>
+<li class="comment"><span class="comment-name">Veron Lee:</span> <span class="comment-text">Continue to build and strengthen close working relationships with both clients and successfully hired candidates to enhance both Kestria and own firm&#x27;s corporate image and branding in the segments that we focus.</span></li>
+<li class="comment"><span class="comment-name">Giorgio Veronelli:</span> <span class="comment-text">Improve website.</span></li></ul>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">What should we do differently next time?</h2>
+        <div class="ai-summary">
+          <div class="ai-summary-head"><span class="ai-badge">AI</span> Summary</div>
+          <p class="ai-summary-body">The most repeated request is to improve the dinners and venues (quieter, less repetitive, more international). Many also want the business development and Practice Group sessions rethought, as they feel repetitive year to year, and several found the sponsor-led presentations less engaging. The client event and the high-energy, authentic format were highlighted as successes worth keeping.</p>
+        </div>
+        <ul class="comment-list"><li class="comment"><span class="comment-name">Thomas Suter:</span> <span class="comment-text">It was the best conference so far. Thanks a lot for the organization. The dinners were difficult.</span></li>
+<li class="comment"><span class="comment-name">Ron Magen:</span> <span class="comment-text">More wine in dinners :)</span></li>
+<li class="comment"><span class="comment-name">Cees:</span> <span class="comment-text">Referring to authenticity, during the introductory opening of the conference by the board, the presentation should be more aligned with the international nature of the memberships both in tone and content.</span></li>
+<li class="comment"><span class="comment-name">Thomas Muhmenthaler:</span> <span class="comment-text">Please choose venues where we can talk to each other during dinner. The venue we chose wasn&#x27;t suitable—it was way too loud.</span></li>
+<li class="comment"><span class="comment-name">Raj Kumar:</span> <ul class="bullets"><li>If you are serious, assemble a team to work over the plan, comprising of our partners. They should already start planning now. Do differently? I am a believer of brain science.</li><li>People will always share their successes with pride, but ignore their failures. We as partners should openly discuss about business difficulties. Can we have a session on the failures and others learn from us and avoid. secondly in terms of best practices.</li><li>People are eager to share their best practices...but has it really worked or it worked once and they believe that it is! Instead approach partners who are doing well really...in terms of their financial reporting in Kestria.</li><li>Get them to share their best practices. The loudest get promoted.</li><li>That shouldn&#x27;t be the way.</li></ul></li>
+<li class="comment"><span class="comment-name">Shalini:</span> <span class="comment-text">- Introducing Clients to different partners who are globally positioned during networking.</span></li>
+<li class="comment"><span class="comment-name">Celine Chabée:</span> <span class="comment-text">Client meetings were a great initiative, but they would have benefited from stronger cross-border connections and better preparation beforehand.</span></li>
+<li class="comment"><span class="comment-name">Jay Worthy:</span> <span class="comment-text">For the conference? Maybe figure out a way to approach our BD sessions differently. Kestria Italy made a great point at our table &#x27;We have these same or similar questions every year, for BD. And we usually give same or similar answers. Should we be doing something else?&#x27;</span></li>
+<li class="comment"><span class="comment-name">Guy Brew:</span> <span class="comment-text">Continued focus on cross border business, but not as a primary focus / value proposition Structures for cross border research collaboration - we are search firms after all Stop using pressure and visible competition to receive client input to support the Kestria survey.</span></li>
+<li class="comment"><span class="comment-name">Anuradha Patil:</span> <span class="comment-text">The balance of interactive and learning focussed sessions was quite engaging.</span></li>
+<li class="comment"><span class="comment-name">Tomasz:</span> <span class="comment-text">More business cases in groups.</span></li>
+<li class="comment"><span class="comment-name">Dwitiya Sengupta:</span> <span class="comment-text">Thank you to the entire Kestria team and board for the wonderful event and inspiring conversation. I have listed my suggestion in the response to question 1 and 2.</span></li>
+<li class="comment"><span class="comment-name">Janice:</span> <span class="comment-text">I don&#x27;t think anything needs to change.</span></li>
+<li class="comment"><span class="comment-name">Steve McKinney:</span> <span class="comment-text">We must develop a better process and strategy for the Practice Group sessions. Perhaps we should conduct research beyond our industry, among other management consulting firms, to improve business development within our practice groups.</span></li>
+<li class="comment"><span class="comment-name">Kate Modingoana:</span> <span class="comment-text">No major changes just better on preparations as i felt some of the things were thought of along the way.</span></li>
+<li class="comment"><span class="comment-name">Alexander:</span> <span class="comment-text">It was well balanced.</span></li>
+<li class="comment"><span class="comment-name">Emily Witts:</span> <span class="comment-text">I don&#x27;t have anything of significance to add. I did think that the client function, while nice, had little impact on my practice (education)</span></li>
+<li class="comment"><span class="comment-name">Michael Kantel:</span> <span class="comment-text">No changes recommended.</span></li>
+<li class="comment"><span class="comment-name">Malcolm Duncan:</span> <span class="comment-text">Do away with business attire and replace it with Smart casual which will be more in keeping with both the next conference setting and global best practice. I know we need the sponsorship, but both the presentations were dull and not informative in terms of new information.</span></li>
+<li class="comment"><span class="comment-name">Razvan Eliad:</span> <span class="comment-text">I think this is a question for those whom attended more conferences than me :)</span></li>
+<li class="comment"><span class="comment-name">Wu Nine Jee:</span> <span class="comment-text">The Practice Group breakout session is rather monotonous. Perhaps, it could be replaced with other activities.</span></li>
+<li class="comment"><span class="comment-name">Constanza Ossa:</span> <span class="comment-text">The ezekia presentation is already too repeated. Also, I would start with a good key note speaker the first day. The team work activity should involve much more interaction, and should be longer.</span></li>
+<li class="comment"><span class="comment-name">Anders Jørgensen:</span> <span class="comment-text">More of the same.</span></li>
+<li class="comment"><span class="comment-name">Eveline Muhmenthaler:</span> <span class="comment-text">I really liked the authentic structure of the conference and truly appreciated the high energy. So you could think about implement even more parts in group work. You should follow the idea of a client event. That was a great success!!!</span></li>
+<li class="comment"><span class="comment-name">Niklas Claesson:</span> <span class="comment-text">Very good meeting but it&#x27;s also very important to discuss and integrate during the breaks etc. 95% of all communication during a Kestria conf. is business focused whether we are in a meeting room, coffee break or at a dinner :)</span></li>
+<li class="comment"><span class="comment-name">Piotr Mazurkiewicz:</span> <span class="comment-text">Everything was good.</span></li>
+<li class="comment"><span class="comment-name">Kari Hausen:</span> <span class="comment-text">Just fine guys.</span></li>
+<li class="comment"><span class="comment-name">Monicca Yan:</span> <span class="comment-text">Possibly allow opportunity for cross PG learning.</span></li>
+<li class="comment"><span class="comment-name">Katerina:</span> <span class="comment-text">Start the previous evening with a gala: opening speech, client event and dinner, and next two days conference and a party for members.</span></li>
+<li class="comment"><span class="comment-name">Travis:</span> <span class="comment-text">I think the content of this meeting was very well done. Best yet. Dinners lacked but that&#x27;s okay, maybe it was a part of the experience.</span></li>
+<li class="comment"><span class="comment-name">Veron Lee:</span> <span class="comment-text">Suggest Kestria global team in creating a standardized pipeline list for x-border opportunities which would be used across all the Practice groups, and review on a quarterly basis as part of Practice Group&#x27;s meeting agenda. In turn, Kestria global team could track and monitor the progress, success rate and revenue generation. Together, we strive together to achieve a common goal with united efforts.</span></li>
+<li class="comment"><span class="comment-name">Giorgio Veronelli:</span> <span class="comment-text">Not more working groups.</span></li></ul>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">What topics would you like us to cover in future Kestria Virtual Academy events (including our online webinars)?</h2>
+        <div class="ai-summary">
+          <div class="ai-summary-head"><span class="ai-badge">AI</span> Summary</div>
+          <p class="ai-summary-body">AI dominates the wish list - especially practical AI tools and workflows for business development and recruitment. Respondents also want more on future-proof leadership, how-to guidance for initiating cross-border business, market and economic insights, and the evolution of executive search toward strategic advisory.</p>
+        </div>
+        <ul class="comment-list"><li class="comment"><span class="comment-name">Ron Magen:</span> <span class="comment-text">The future of Executive Search.</span></li>
+<li class="comment"><span class="comment-name">Cees:</span> <span class="comment-text">Client advisory &amp; stakeholder management.</span></li>
+<li class="comment"><span class="comment-name">Thomas Muhmenthaler:</span> <ul class="bullets"><li>I would focus on the one “Big Bang” Kestria Annual Virtual Event—the event that no customer should miss and that can only be attended by personal invitation from a Kestria member.</li><li>Chose one big big, very big key note speaker per year! invitations via personal message only. big bang.</li><li>Clients must do want to participate.</li></ul></li>
+<li class="comment"><span class="comment-name">Raj Kumar:</span> <span class="comment-text">Succession Planning in search firms Continuation of topics discussed in Singapore.</span></li>
+<li class="comment"><span class="comment-name">Shalini:</span> <span class="comment-text">In Practice Group meetings, by dedicating 50% of time to discuss cross border BD/initiatives and 50% to insights/learning, share market intelligence, case studies, and best practices across our global network.</span></li>
+<li class="comment"><span class="comment-name">Celine Chabée:</span> <span class="comment-text">AI integration capability (adapt to AI-driven environments,integrate AI into decision-making) Future-oriented leadership.</span></li>
+<li class="comment"><span class="comment-name">Jay Worthy:</span> <span class="comment-text">More step by step on how to initiate a XB with a client. A lot of members in smaller markets just do not know how to begin the process.</span></li>
+<li class="comment"><span class="comment-name">Anuradha Patil:</span> <span class="comment-text">Joint BD and networking by practice groups rather than individual clients and contacts will be more rewarding and less chaotic.</span></li>
+<li class="comment"><span class="comment-name">Tomasz:</span> <span class="comment-text">Success stories on winning business from the new clients.</span></li>
+<li class="comment"><span class="comment-name">Dwitiya Sengupta:</span> <span class="comment-text">Specific AI workflows/ tools that are being used for BD and Recruitment would be interesting to learn more about, any social media education around content positioning and personal branding with data insights are also helpful.</span></li>
+<li class="comment"><span class="comment-name">Janice:</span> <span class="comment-text">How to position ourselves in local markets as leaders in Executive search.</span></li>
+<li class="comment"><span class="comment-name">Steve McKinney:</span> <span class="comment-text">More AI-related topics and business development topics.</span></li>
+<li class="comment"><span class="comment-name">Alexander:</span> <span class="comment-text">Global and regional political/economic developments that will influence also our business.</span></li>
+<li class="comment"><span class="comment-name">Emily Witts:</span> <span class="comment-text">More focus on AI topics would be good.</span></li>
+<li class="comment"><span class="comment-name">Malcolm Duncan:</span> <span class="comment-text">Build on our position is trusted advisors in a world of AI; examples of collective best practice from our network.</span></li>
+<li class="comment"><span class="comment-name">Razvan Eliad:</span> <span class="comment-text">-Maybe hearing real stories on how others pitch Kestria, as our global network, with their existing clients, hearing their client&#x27;s objections and how those objections are treated.</span></li>
+<li class="comment"><span class="comment-name">Constanza Ossa:</span> <span class="comment-text">Selling Strategies.</span></li>
+<li class="comment"><span class="comment-name">Anders Jørgensen:</span> <span class="comment-text">Market insights and how Kestria can bridge the gaps across markets and segments.</span></li>
+<li class="comment"><span class="comment-name">João Miguel Antunes:</span> <span class="comment-text">It would be particularly valuable to continue exploring topics that strengthen our role as strategic advisors, including:</span><ul class="bullets"><li>The evolution of executive search into strategic advisory, particularly in areas such as succession planning, organisational design, and transformation.</li><li>Practical models for cross-border collaboration within the network.</li><li>The integration of data, market intelligence, and AI into search and decision-making.</li></ul></li>
+<li class="comment"><span class="comment-name">Eveline Muhmenthaler:</span> <span class="comment-text">How to implement new services for example &quot;Executive Advisory&quot; pro actively.</span></li>
+<li class="comment"><span class="comment-name">Piotr Mazurkiewicz:</span> <span class="comment-text">Human with AI as additional value to C-level clients.</span></li>
+<li class="comment"><span class="comment-name">Kari Hausen:</span> <span class="comment-text">Continue about the theme of Dr. Ayesha Khanna.</span></li>
+<li class="comment"><span class="comment-name">Monicca Yan:</span> <span class="comment-text">Leadership adoption of AI and how AI enhanced the value of the work rather than mere headcount reduction.</span></li>
+<li class="comment"><span class="comment-name">Katerina:</span> <span class="comment-text">Future proof leadership.</span></li>
+<li class="comment"><span class="comment-name">Travis:</span> <span class="comment-text">AI for the infrastructure of the business. We talk a lot about the process and client side of AI but what about how we can run our actual businesses more effectively (marketing, finance, onboarding etc.)</span></li>
+<li class="comment"><span class="comment-name">Veron Lee:</span> <ul class="bullets"><li>Sharing of successful placements which everyone could learn from one another.</li><li>Sharing of any new/updated/revised mandatory laws &amp; regulations for awareness and education.</li><li>Orientation e-kit (including Kestria internal rules and guidelines) for new Kestria member(s) to assess and self-learn.</li></ul></li>
+<li class="comment"><span class="comment-name">Giorgio Veronelli:</span> <span class="comment-text">More presentations in Line with business development.</span></li></ul>
+      </section>
+
+    <footer>Kestria &middot; 2026 Global Conference, Singapore</footer>
+  </main>
+</body>
+</html>
