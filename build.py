@@ -568,46 +568,21 @@ PAGE = """<!DOCTYPE html>
   }
   .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px 80px; }
 
-  /* Header */
-  .topbar {
-    background: var(--dark-blue);
-    color: var(--white);
-    padding: 28px 0 26px;
-  }
-  .topbar-inner { max-width: 920px; margin: 0 auto; padding: 0 20px; }
-  .brand-logo {
-    height: 68px;
-    width: auto;
+  .hero-photo {
     display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
   }
-  .tagline {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0.06em;
-    color: var(--gold);
-    margin-top: 6px;
-    text-transform: none;
-  }
-  .tagline em { font-style: italic; }
   .title {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: clamp(22px, 4vw, 30px);
     line-height: 1.2;
-    margin: 30px 0 6px;
+    margin: 28px 0 8px;
     color: var(--dark-blue);
   }
-  .subtitle { color: var(--muted); font-size: 15px; margin: 0 0 20px; line-height: 1.5; }
-
-  .hero-photo {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 14px;
-    margin: 0 0 36px;
-    box-shadow: 0 8px 24px rgba(12,35,64,0.12);
-  }
+  .subtitle { color: var(--muted); font-size: 15px; margin: 0 0 32px; line-height: 1.5; }
 
   .group-label {
     font-family: "Montserrat", sans-serif;
@@ -785,16 +760,11 @@ PAGE = """<!DOCTYPE html>
 </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <img class="brand-logo" src="kestria-logo-white.png" alt="Kestria">
-    </div>
-  </header>
+  <img class="hero-photo" src="conference-photo.png" alt="Kestria Global Conference 2026, Singapore — group photo">
 
   <main class="wrap">
     <h1 class="title">2026 Kestria Global Conference in Singapore</h1>
     <p class="subtitle">Post-conference feedback summary (__RESP__ of __TOTAL__ participants shared their feedback)</p>
-    <img class="hero-photo" src="conference-photo.png" alt="Kestria Global Conference 2026, Singapore — group photo">
 
     <div class="group-label">Ratings</div>
     __RATINGS__
