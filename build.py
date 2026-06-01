@@ -566,7 +566,7 @@ PAGE = """<!DOCTYPE html>
     font-size: 16px;
     line-height: 1.6;
   }
-  .wrap { max-width: 920px; margin: 0 auto; padding: 20px 20px 40px; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px 48px; }
 
   .hero-banner {
     background: var(--dark-blue);
@@ -591,19 +591,30 @@ PAGE = """<!DOCTYPE html>
     margin: 0;
     opacity: 0.92;
   }
-  .section-banner {
-    margin-top: 0;
-    padding: 28px 20px 24px;
-  }
-  .section-banner .hero-title {
+
+  .section-heading {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
     font-size: clamp(22px, 3.5vw, 28px);
-    margin: 0;
+    color: var(--dark-blue);
+    margin: 56px 0 24px;
+    padding-top: 36px;
+    border-top: 3px solid var(--line);
   }
-  .hero-photo {
+  .section-heading--first {
+    margin-top: 28px;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .footer-photo {
     display: block;
     width: 100%;
+    max-width: 640px;
     height: auto;
-    margin: 0;
+    margin: 32px auto 0;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(12,35,64,0.1);
   }
 
   /* Cards */
@@ -770,27 +781,16 @@ PAGE = """<!DOCTYPE html>
     </div>
   </header>
 
-  <div class="hero-banner section-banner">
-    <div class="hero-banner-inner">
-      <h2 class="hero-title">Ratings</h2>
-    </div>
-  </div>
   <div class="wrap">
+    <h2 class="section-heading section-heading--first">Ratings</h2>
     __RATINGS__
-  </div>
 
-  <div class="hero-banner section-banner">
-    <div class="hero-banner-inner">
-      <h2 class="hero-title">In their own words</h2>
-    </div>
-  </div>
-  <div class="wrap">
+    <h2 class="section-heading">In their own words</h2>
     __TEXTS__
 
     <footer>Kestria &middot; 2026 Global Conference, Singapore</footer>
+    <img class="footer-photo" src="conference-photo.png" alt="Kestria Global Conference 2026, Singapore — group photo">
   </div>
-
-  <img class="hero-photo" src="conference-photo.png" alt="Kestria Global Conference 2026, Singapore — group photo">
 </body>
 </html>
 """
