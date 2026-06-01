@@ -61,31 +61,16 @@
     margin: 30px 0 6px;
     color: var(--dark-blue);
   }
-  .subtitle { color: var(--muted); margin: 0 0 28px; }
+  .subtitle { color: var(--muted); font-size: 15px; margin: 0 0 20px; line-height: 1.5; }
 
-  /* Response-rate banner */
-  .stat {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    background: var(--blue);
-    color: var(--white);
+  .hero-photo {
+    display: block;
+    width: 100%;
+    height: auto;
     border-radius: 14px;
-    padding: 24px 28px;
-    margin: 22px 0 38px;
-    box-shadow: 0 10px 24px rgba(12,35,64,0.14);
+    margin: 0 0 36px;
+    box-shadow: 0 8px 24px rgba(12,35,64,0.12);
   }
-  .stat-num {
-    font-family: "Oswald", "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 52px;
-    line-height: 1;
-    color: var(--white);
-    white-space: nowrap;
-  }
-  .stat-of { font-size: 0.72em; font-weight: 600; opacity: 0.92; }
-  .stat-label { font-size: 15px; opacity: 0.95; }
-  .stat-label strong { font-weight: 700; }
 
   .group-label {
     font-family: "Montserrat", sans-serif;
@@ -253,14 +238,11 @@
   }
 
   @media (max-width: 560px) {
-    .stat { flex-direction: column; align-items: flex-start; gap: 8px; padding: 20px; }
-    .stat-num { font-size: 52px; }
     .card { padding: 20px 18px; }
   }
 
   @media print {
     body { background: #fff; }
-    .stat { box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .card { box-shadow: none; break-inside: avoid; }
   }
 </style>
@@ -274,14 +256,8 @@
 
   <main class="wrap">
     <h1 class="title">2026 Kestria Global Conference in Singapore</h1>
-    <p class="subtitle">Post-conference feedback summary</p>
-
-    <div class="stat">
-      <div class="stat-num">49<span class="stat-of"> of 54</span></div>
-      <div class="stat-label">
-        <strong>participants</strong> shared their feedback
-      </div>
-    </div>
+    <p class="subtitle">Post-conference feedback summary (49 of 54 participants shared their feedback)</p>
+    <img class="hero-photo" src="conference-photo.png" alt="Kestria Global Conference 2026, Singapore — group photo">
 
     <div class="group-label">Ratings</div>
     
