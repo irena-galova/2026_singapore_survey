@@ -566,7 +566,7 @@ PAGE = """<!DOCTYPE html>
     font-size: 16px;
     line-height: 1.6;
   }
-  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px 80px; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 20px 20px 40px; }
 
   .hero-banner {
     background: var(--dark-blue);
@@ -591,36 +591,19 @@ PAGE = """<!DOCTYPE html>
     margin: 0;
     opacity: 0.92;
   }
+  .section-banner {
+    margin-top: 0;
+    padding: 28px 20px 24px;
+  }
+  .section-banner .hero-title {
+    font-size: clamp(22px, 3.5vw, 28px);
+    margin: 0;
+  }
   .hero-photo {
     display: block;
     width: 100%;
     height: auto;
     margin: 0;
-  }
-  .meta {
-    color: var(--muted);
-    font-size: 14px;
-    margin: 20px 0 4px;
-  }
-
-  .group-label {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: 12px;
-    color: var(--gold);
-    margin: 40px 0 12px;
-  }
-
-  .section-heading {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: clamp(22px, 3.5vw, 28px);
-    color: var(--dark-blue);
-    margin: 56px 0 24px;
-    padding-top: 36px;
-    border-top: 3px solid var(--line);
   }
 
   /* Cards */
@@ -765,7 +748,8 @@ PAGE = """<!DOCTYPE html>
     text-align: center;
     color: var(--muted);
     font-size: 13px;
-    margin-top: 48px;
+    margin: 48px 0 0;
+    padding-bottom: 24px;
   }
 
   @media (max-width: 560px) {
@@ -782,23 +766,31 @@ PAGE = """<!DOCTYPE html>
   <header class="hero-banner">
     <div class="hero-banner-inner">
       <h1 class="hero-title">Kestria Global Conference in Singapore</h1>
-      <p class="hero-sub">Post conference feedback</p>
+      <p class="hero-sub">Post-conference feedback (__RESP__ of __TOTAL__ participants shared their feedback)</p>
     </div>
   </header>
 
-  <img class="hero-photo" src="conference-photo.png" alt="Kestria Global Conference 2026, Singapore — group photo">
-
-  <main class="wrap">
-    <p class="meta">__RESP__ of __TOTAL__ participants shared their feedback</p>
-
-    <div class="group-label">Ratings</div>
+  <div class="hero-banner section-banner">
+    <div class="hero-banner-inner">
+      <h2 class="hero-title">Ratings</h2>
+    </div>
+  </div>
+  <div class="wrap">
     __RATINGS__
+  </div>
 
-    <h2 class="section-heading">In their own words</h2>
+  <div class="hero-banner section-banner">
+    <div class="hero-banner-inner">
+      <h2 class="hero-title">In their own words</h2>
+    </div>
+  </div>
+  <div class="wrap">
     __TEXTS__
 
     <footer>Kestria &middot; 2026 Global Conference, Singapore</footer>
-  </main>
+  </div>
+
+  <img class="hero-photo" src="conference-photo.png" alt="Kestria Global Conference 2026, Singapore — group photo">
 </body>
 </html>
 """
